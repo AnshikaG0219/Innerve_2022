@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 body {
-  display: grid;
-  place-content: center;
+  /* display: grid;
+  place-content: center; */
   font-family: "Quicksand", sans-serif;
   position: relative;
   /* overflow-x: hidden; */
@@ -93,7 +93,7 @@ body {
 
 .waterfall {
   width: 80vw;
-  margin: 2em 0;
+  margin: 2em auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 1em;

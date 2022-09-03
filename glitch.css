@@ -1,6 +1,7 @@
 .container {
   margin: auto;
   position: relative;
+  width: fit-content;
 }
 
 .glitch,
