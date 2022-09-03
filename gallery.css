@@ -2,80 +2,100 @@
 body {
   display: grid;
   place-content: center;
-  background: #22003d;
   font-family: "Quicksand", sans-serif;
+  position: relative;
+  /* overflow-x: hidden; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.gallery-heading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2em 0;
+/**********************************************************/
+/********************FLOATING ICONS************************/
+/**********************************************************/
+
+.svg-icon {
+  position: absolute;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
-.neon {
-  /* font-family: "Quicksand", sans-serif; */
-  color: #fb4264;
-  font-size: 9vw;
-  line-height: 9vw;
-  text-shadow: 0 0 3vw #f40a35;
+.svg-icon img {
+  width: 9rem;
+  /* position: absolute; */
 }
 
-.flux {
-  /* font-family: "Quicksand", sans-serif; */
-  color: #426dfb;
-  font-size: 9vw;
-  line-height: 9vw;
-  text-shadow: 0 0 3vw #2356ff;
+.svg-icon.design-1 {
+  top: 10vw;
+  left: -45px;
 }
 
-.neon {
-  animation: neon 1s ease infinite;
-  -moz-animation: neon 1s ease infinite;
-  -webkit-animation: neon 1s ease infinite;
+.svg-icon.design-8 {
+  top: 45vw;
+  left: 35px;
 }
 
-@keyframes neon {
-  0%,
-  100% {
-    text-shadow: 0 0 1vw #fa1c16, 0 0 3vw #fa1c16, 0 0 10vw #fa1c16,
-      0 0 10vw #fa1c16, 0 0 0.4vw #fed128, 0.5vw 0.5vw 0.1vw #806914;
-    color: #fed128;
+.svg-icon.design-8 img { 
+  width: 6rem;
+}
+
+.svg-icon.design-3 {
+  top: 25vw;
+  right: -55px;
+}
+
+.svg-icon.design-4 {
+  top: 80vw;
+  left: -75px;
+}
+
+.svg-icon.design-4 img {
+  width: 12rem;
+}
+
+.svg-icon.design-5 {
+  top: 112vw;
+  right: 5px;
+}
+
+.svg-icon.design-5 img {
+  width: 16rem;
+}
+
+.svg-icon.design-6 {
+  top: 150vw;
+}
+.svg-icon.design-7 {
+  top: 180vw;
+  right: -30px;
+}
+/* .svg-icon.design-8 */
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
   }
   50% {
-    text-shadow: 0 0 0.5vw #800e0b, 0 0 1.5vw #800e0b, 0 0 5vw #800e0b,
-      0 0 5vw #800e0b, 0 0 0.2vw #800e0b, 0.5vw 0.5vw 0.1vw #40340a;
-    color: #806914;
+    transform: translate(0, 15px);
   }
-}
-
-.flux {
-  animation: flux 2s linear infinite;
-  -moz-animation: flux 2s linear infinite;
-  -webkit-animation: flux 2s linear infinite;
-  -o-animation: flux 2s linear infinite;
-}
-
-@keyframes flux {
-  0%,
   100% {
-    text-shadow: 0 0 1vw #1041ff, 0 0 3vw #1041ff, 0 0 10vw #1041ff,
-      0 0 10vw #1041ff, 0 0 0.4vw #8bfdfe, 0.5vw 0.5vw 0.1vw #147280;
-    color: #28d7fe;
-  }
-  50% {
-    text-shadow: 0 0 0.5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180,
-      0 0 5vw #082180, 0 0 0.2vw #082180, 0.5vw 0.5vw 0.1vw #0a3940;
-    color: #146c80;
+    transform: translate(0, -0px);
   }
 }
 
+/**********************************************************/
+/****************************GRID**************************/
+/**********************************************************/
 
 .waterfall {
   width: 80vw;
   margin: 2em 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 1em;
   grid-auto-flow: row dense;
   grid-auto-rows: 10vh;
